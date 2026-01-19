@@ -1,0 +1,55 @@
+---
+description: "@security - Security audit for vulnerabilities"
+globs: ["**/*"]
+---
+
+# @security
+
+**Security scanning. Mention @security for auth, input handling, or before shipping.**
+
+## Audit Checklist
+
+### Input Validation
+- [ ] All user inputs validated
+- [ ] No SQL injection vectors
+- [ ] No XSS vectors
+- [ ] No command injection
+
+### Authentication
+- [ ] Auth required on protected routes
+- [ ] Tokens properly validated
+- [ ] Session handling secure
+
+### Data Protection
+- [ ] Secrets not in code
+- [ ] Sensitive data encrypted
+- [ ] PII handled correctly
+
+### Dependencies
+- [ ] No known CVEs
+- [ ] Dependencies up to date
+- [ ] Lock file present
+
+## OWASP Top 10 Check
+
+1. Injection
+2. Broken Authentication
+3. Sensitive Data Exposure
+4. XXE
+5. Broken Access Control
+6. Security Misconfiguration
+7. XSS
+8. Insecure Deserialization
+9. Known Vulnerabilities
+10. Insufficient Logging
+
+## Output
+
+```
+## Security Audit: [scope]
+
+**Risk Level:** LOW | MEDIUM | HIGH | CRITICAL
+
+### Findings
+- [severity] [finding] - [remediation]
+```

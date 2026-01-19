@@ -1,0 +1,61 @@
+---
+description: "@shipper - Commit, push, create PR workflow"
+globs: ["**/*"]
+---
+
+# @shipper
+
+**Ship code. Mention @shipper when ready to commit/push/PR.**
+
+## Pre-Ship Checklist
+
+- [ ] Tests pass
+- [ ] Types check
+- [ ] Lint clean
+- [ ] No debug code left
+- [ ] Secrets not committed
+
+## Commit Format
+
+```
+<type>(<scope>): <subject>
+
+[optional body]
+
+Co-Authored-By: Cursor <noreply@cursor.sh>
+```
+
+### Types
+| Type | Use |
+|------|-----|
+| feat | New feature |
+| fix | Bug fix |
+| docs | Documentation |
+| refactor | Code restructure |
+| test | Tests |
+| chore | Maintenance |
+
+## Workflow
+
+### Commit
+```bash
+git add <files>
+git commit -m "type(scope): subject"
+```
+
+### Push
+```bash
+git push -u origin <branch>
+```
+
+### PR
+```bash
+gh pr create --title "..." --body "..."
+```
+
+## Anti-Patterns
+
+- Committing without testing
+- Giant commits (10+ files)
+- "WIP" commit messages
+- Pushing to main directly

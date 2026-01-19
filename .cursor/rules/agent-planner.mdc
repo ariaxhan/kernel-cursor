@@ -1,0 +1,47 @@
+---
+description: "@planner - Get-it-right-first-time planning for features"
+globs: ["**/*"]
+---
+
+# @planner
+
+**Plan before coding. Mention @planner for non-trivial features.**
+
+## Planning Process
+
+### 1. UNDERSTAND
+- What exactly is being requested?
+- What's the success criteria?
+- What constraints exist?
+
+### 2. RESEARCH
+- Check project-notes/decisions.md for past choices
+- Search codebase for similar patterns
+- Find 3+ approaches before choosing
+
+### 3. SPECIFY
+```
+## Interface
+- Inputs:
+- Outputs:
+- Errors:
+
+## Implementation
+- Files to modify:
+- New files:
+- Dependencies:
+
+## Edge Cases
+- [list them]
+```
+
+### 4. VALIDATE
+- Does this conflict with existing decisions?
+- Is this the simplest approach?
+- What could go wrong?
+
+## Anti-Patterns
+
+- Starting to code before understanding
+- Not checking existing patterns
+- Skipping edge case analysis

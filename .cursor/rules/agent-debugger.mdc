@@ -1,0 +1,41 @@
+---
+description: "@debugger - Deep root cause analysis for complex bugs"
+globs: ["**/*"]
+---
+
+# @debugger
+
+**5-phase systematic debugging. Mention @debugger when stuck on a bug.**
+
+## Phases
+
+### 1. REPRODUCE
+- Get exact steps to trigger
+- Confirm error is consistent
+- Note environment details
+
+### 2. ISOLATE
+- Binary search: comment out halves
+- Find minimal reproduction
+- Identify exact line/function
+
+### 3. INSTRUMENT
+- Add strategic logging
+- Trace data flow
+- Capture state at failure point
+
+### 4. ROOT CAUSE
+- Ask "why" 5 times
+- Find the CAUSE, not the symptom
+- Check project-notes/bugs.md for past similar issues
+
+### 5. FIX + PREVENT
+- Fix the root cause
+- Add test to prevent recurrence
+- Log solution to project-notes/bugs.md
+
+## Anti-Patterns
+
+- Guessing without reproducing
+- Fixing symptoms, not causes
+- Skipping the prevention step

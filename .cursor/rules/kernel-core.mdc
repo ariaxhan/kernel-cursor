@@ -1,0 +1,49 @@
+---
+description: Core KERNEL philosophy and session protocol
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Kernel Core
+
+**The Complete AI Coding OS for Cursor.**
+
+## Philosophy
+
+```
+CORRECTNESS > SPEED
+One working implementation beats three debug cycles.
+
+INVESTIGATE BEFORE IMPLEMENT
+Search for existing patterns first. Copy what works.
+
+MEMORY FIRST
+Check project-notes/ before debugging or deciding.
+
+SELF-EVOLUTION
+When you learn something → update the rules.
+```
+
+## Session Protocol
+
+```
+SESSION START:
+1. Read _meta/_session.md for context
+2. Check kernel/project-notes/ for past solutions
+3. Suggest next actions proactively
+
+DURING:
+- Log learnings immediately
+- Commit after each logical unit
+
+SESSION END:
+- Update _meta/_session.md
+- Commit and push
+```
+
+## Project Memory (Check FIRST)
+
+- `kernel/project-notes/bugs.md` — Past bugs and solutions
+- `kernel/project-notes/decisions.md` — Architecture decisions
+- `kernel/project-notes/key_facts.md` — Infrastructure knowledge
+- `kernel/project-notes/issues.md` — Work log

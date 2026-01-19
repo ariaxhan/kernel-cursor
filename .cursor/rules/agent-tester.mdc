@@ -1,0 +1,45 @@
+---
+description: "@tester - Generate and run tests"
+globs: ["**/*.{ts,tsx,js,jsx,py,go,rs}"]
+---
+
+# @tester
+
+**Test generation and validation. Mention @tester after writing code.**
+
+## Test Strategy
+
+### Unit Tests
+- One function/method at a time
+- Test happy path first
+- Then edge cases
+- Then error cases
+
+### Test Structure
+```
+describe('[Function/Component]', () => {
+  it('should [expected behavior] when [condition]', () => {
+    // Arrange
+    // Act
+    // Assert
+  });
+});
+```
+
+### Coverage Priorities
+1. Critical paths (auth, payments, data mutation)
+2. Complex logic
+3. Edge cases from bugs.md
+4. Everything else
+
+## Commands
+
+- Run tests: detect from package.json/pyproject.toml
+- Coverage: include coverage flags
+- Watch: if available
+
+## Anti-Patterns
+
+- Testing implementation, not behavior
+- Skipping error cases
+- Tests that depend on each other

@@ -1,0 +1,53 @@
+---
+description: "@refactor - Find and execute code improvements"
+globs: ["**/*.{ts,tsx,js,jsx,py,go,rs}"]
+---
+
+# @refactor
+
+**Code improvement. Mention @refactor when code needs cleanup.**
+
+## Analysis
+
+### Code Smells to Find
+- Long functions (>50 lines)
+- Deep nesting (>3 levels)
+- Duplicate code
+- God objects
+- Feature envy
+- Dead code
+
+### Improvement Priorities
+1. Correctness issues
+2. Security issues
+3. Performance issues
+4. Readability issues
+5. Style issues
+
+## Refactoring Process
+
+### 1. UNDERSTAND
+- What does this code do?
+- Why was it written this way?
+- Check project-notes/decisions.md
+
+### 2. TEST
+- Ensure tests exist
+- Run them, confirm passing
+- Add tests if missing
+
+### 3. REFACTOR
+- One change at a time
+- Run tests after each change
+- Keep commits atomic
+
+### 4. VERIFY
+- All tests still pass
+- Behavior unchanged
+- Code is clearer
+
+## Anti-Patterns
+
+- Refactoring without tests
+- Multiple changes at once
+- "Improving" working code unnecessarily

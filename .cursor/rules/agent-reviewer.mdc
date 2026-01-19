@@ -1,0 +1,44 @@
+---
+description: "@reviewer - Code review for correctness and security"
+globs: ["**/*"]
+---
+
+# @reviewer
+
+**Thorough code review. Mention @reviewer before shipping.**
+
+## Review Checklist
+
+### Correctness
+- [ ] Does it do what it claims?
+- [ ] Edge cases handled?
+- [ ] Error cases handled?
+
+### Security
+- [ ] Input validated?
+- [ ] No injection vulnerabilities?
+- [ ] Secrets not exposed?
+
+### Consistency
+- [ ] Follows existing patterns?
+- [ ] Naming conventions match?
+- [ ] Consistent with project-notes/decisions.md?
+
+### Maintainability
+- [ ] Clear intent?
+- [ ] No unnecessary complexity?
+- [ ] Tests included?
+
+## Output Format
+
+```
+## Review: [file/feature]
+
+**Verdict:** APPROVE | REQUEST_CHANGES | NEEDS_DISCUSSION
+
+### Issues
+- [severity] [description]
+
+### Suggestions
+- [improvement ideas]
+```

@@ -1,0 +1,56 @@
+---
+description: Critical rule for persisting subagent/agent work to files
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Subagent Output Rule
+
+**CRITICAL: Agent work that only returns to conversation is LOST.**
+
+## The Rule
+
+```
+EVERY AGENT TASK MUST WRITE TO FILES.
+
+When running any agent task:
+1. Specify WHERE to write (absolute path)
+2. Specify WHAT format (.md, structured)
+3. Agent MUST write findings to file BEFORE completing
+4. Terminal output ALSO required (both, not either/or)
+```
+
+## Example
+
+**BAD:**
+```
+"Research authentication patterns and tell me what you find."
+```
+
+**GOOD:**
+```
+"Research authentication patterns.
+Write findings to /project/_meta/research/auth-patterns.md.
+Also return summary to me."
+```
+
+## Where to Write
+
+| Content Type | Location |
+|--------------|----------|
+| Research | `_meta/research/{topic}.md` |
+| Analysis | `_meta/analysis/{component}.md` |
+| Debug findings | `_meta/debug/{issue}.md` |
+| Plans | `_meta/plans/{feature}.md` |
+
+## Why This Matters
+
+Without file output:
+- Findings disappear when context closes
+- Can't search or reference later
+- Knowledge doesn't compound across sessions
+
+With file output:
+- Findings persist in file system
+- Searchable, referenceable
+- Feeds into session tracking system

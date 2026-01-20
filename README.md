@@ -2,7 +2,7 @@
 
 **The Complete AI Coding OS for Cursor.**
 
-7 @-mentionable agents | 10 methodology banks | 4 project-notes | session memory
+7 @-mentionable agents | 6 slash commands | 10 methodology banks | 4 project-notes | session memory
 
 ---
 
@@ -15,15 +15,22 @@
 ```
 your-project/
 ├── .cursor/
-│   └── rules/           <-- Cursor auto-loads these
-│       ├── kernel-core.mdc
-│       ├── agent-debugger.mdc
-│       ├── agent-reviewer.mdc
-│       ├── agent-planner.mdc
-│       ├── agent-tester.mdc
-│       ├── agent-security.mdc
-│       ├── agent-refactor.mdc
-│       └── agent-shipper.mdc
+│   ├── rules/           <-- Cursor auto-loads these
+│   │   ├── kernel-core.mdc
+│   │   ├── agent-debugger.mdc
+│   │   ├── agent-reviewer.mdc
+│   │   ├── agent-planner.mdc
+│   │   ├── agent-tester.mdc
+│   │   ├── agent-security.mdc
+│   │   ├── agent-refactor.mdc
+│   │   └── agent-shipper.mdc
+│   └── commands/        <-- Type / to invoke
+│       ├── build.md
+│       ├── validate.md
+│       ├── iterate.md
+│       ├── tearitapart.md
+│       ├── ship.md
+│       └── handoff.md
 ├── kernel/
 │   ├── banks/           <-- 10 methodology templates
 │   ├── project-notes/   <-- 4 memory templates
@@ -48,6 +55,19 @@ Type `@` followed by the agent name:
 | `@security` | Auth, input handling, pre-ship |
 | `@refactor` | Code needs cleanup |
 | `@shipper` | Ready to commit/push/PR |
+
+### Slash Commands
+
+Type `/` followed by the command name:
+
+| Command | Purpose |
+|---------|---------|
+| `/build` | Full pipeline: idea → research → plan → implement → validate |
+| `/validate` | Pre-commit gate: types + lint + tests |
+| `/iterate` | Deep improvement of existing code |
+| `/tearitapart` | Critical review before implementing |
+| `/ship` | Commit, push, create PR |
+| `/handoff` | Generate context brief for session continuation |
 
 ### Project Notes (Check FIRST)
 
@@ -82,8 +102,8 @@ When you learn something:
 |---------|-------------|--------|
 | Agents | 19 (Task tool) | 7 (@-mentionable rules) |
 | Rules | 12 (.md files) | 8 (.mdc files) |
-| Commands | 14 (slash commands) | Via agents |
-| Format | Markdown | MDC with YAML frontmatter |
+| Commands | 14 (slash commands) | 6 (slash commands) |
+| Format | Markdown | MDC + Markdown |
 
 Same philosophy. Same project-notes. Same methodology banks. Different interface.
 
